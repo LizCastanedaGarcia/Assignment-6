@@ -1,0 +1,28 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <h1>Welcome to {{ title }}!</h1>
+      <app-content-list></app-content-list>
+    </div>
+  </div>
+</main>
+
+<div *ngIf="contentItem" class="content-card" [style.box-shadow]="'0 4px 8px rgba(0, 0, 0, 0.1)'">
+  <h2>{{ contentItem.title }}</h2>
+  <p>{{ contentItem.content }}</p>
+</div>
+
+<input type="number" [(ngModel)]="inputId">
+<button (click)="getContentItem()">Get Content Item</button>
+
+<div *ngFor="let message of messagesService.messages" class="message">{{ message }}</div>
+
